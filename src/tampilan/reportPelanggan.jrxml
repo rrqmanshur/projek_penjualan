@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f3fed8e-a39e-4512-800e-daa59624aca7">
+	<property name="ireport.zoom" value="1.6105100000000012"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     pelanggan.`id` AS pelanggan_id,
+     pelanggan.`nmplgn` AS pelanggan_nmplgn,
+     pelanggan.`jenis` AS pelanggan_jenis,
+     pelanggan.`telepon` AS pelanggan_telepon,
+     pelanggan.`alamat` AS pelanggan_alamat
+FROM
+     `pelanggan` pelanggan]]>
+	</queryString>
+	<field name="pelanggan_id" class="java.lang.String"/>
+	<field name="pelanggan_nmplgn" class="java.lang.String"/>
+	<field name="pelanggan_jenis" class="java.lang.String"/>
+	<field name="pelanggan_telepon" class="java.lang.String"/>
+	<field name="pelanggan_alamat" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="160" y="40" width="225" height="39" uuid="dfca7712-0ee7-4f3f-89a5-4916f6b92fcb"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Laporan Data pelanggan]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="a8a47702-841f-4f02-89a7-f49725682770"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="117" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="2" width="63" height="20" uuid="dabd4b2d-7bef-4c3c-8145-f026185da398"/>
+				<text><![CDATA[ID Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="2" width="84" height="20" uuid="02ce7ba7-8e33-47ea-91d3-f9d304dbf822"/>
+				<text><![CDATA[Nama Pelanggan
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="2" width="65" height="20" uuid="aae9a433-ca58-4956-a06a-7bf53d8add93"/>
+				<text><![CDATA[Jenis Kelamin
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="331" y="2" width="43" height="20" uuid="6b4c6419-0e1e-42ca-897a-6ded8cff18e3"/>
+				<text><![CDATA[telepon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="2" width="113" height="20" uuid="820cbae9-8f1a-4d06-85de-f3afd7f32c83"/>
+				<text><![CDATA[Alamat Pelanggan]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="104" y="38" width="84" height="20" uuid="a55b2edf-fc5b-4221-be75-147e45a47f5d"/>
+				<textFieldExpression><![CDATA[$F{pelanggan_nmplgn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="12" y="38" width="63" height="20" uuid="b25eb553-42e2-4259-a50c-9a353a9b6642"/>
+				<textFieldExpression><![CDATA[$F{pelanggan_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="38" width="80" height="20" uuid="0ef55b87-bd75-4b9b-8a19-ec00c16c5fd0"/>
+				<textFieldExpression><![CDATA[$F{pelanggan_jenis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="38" width="81" height="20" uuid="aa2f90a8-6afb-4829-9573-0d8b4d31afa0"/>
+				<textFieldExpression><![CDATA[$F{pelanggan_telepon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="38" width="113" height="20" uuid="332dab71-3f9f-4819-abe5-2e9ae14c4716"/>
+				<textFieldExpression><![CDATA[$F{pelanggan_alamat}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="2" y="2" width="1" height="66" uuid="2ecf1595-491e-4306-ad68-425f1a3038c3"/>
+			</line>
+			<line>
+				<reportElement x="199" y="2" width="1" height="66" uuid="3e4d3444-ce65-47e4-9f45-ecd93e31f38c"/>
+			</line>
+			<line>
+				<reportElement x="91" y="2" width="1" height="66" uuid="bc918365-649f-4e6d-81c2-abd55992372d"/>
+			</line>
+			<line>
+				<reportElement x="300" y="2" width="1" height="66" uuid="aa253c0f-3fbb-4bda-a728-1c766a5cf263"/>
+			</line>
+			<line>
+				<reportElement x="401" y="2" width="1" height="66" uuid="b3decc61-c997-4239-999b-7ed1b4f17df8"/>
+			</line>
+			<line>
+				<reportElement x="554" y="2" width="1" height="66" uuid="41697708-4055-45f8-8a9e-a09eefc30318"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="59" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
